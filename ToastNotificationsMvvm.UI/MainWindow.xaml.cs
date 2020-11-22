@@ -9,14 +9,14 @@ namespace ToastNotificationsMvvm.UI
     /// </summary>
     public partial class MainWindow : Window
     {
-        private ToastHelper _toastService;
+        private ToastHelper _toastHelper;
 
         public MainWindow()
         {
             InitializeComponent();
             DataContext = new MainViewModel();
 
-            _toastService = new ToastHelper(Application.Current);
+            _toastHelper = new ToastHelper(Application.Current);
         }
     }
 }
